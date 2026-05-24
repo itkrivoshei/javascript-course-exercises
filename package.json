@@ -1,24 +1,25 @@
 {
-  "name": "tasks-js",
+  "name": "javascript-frontend-course-exercises",
   "version": "1.0.0",
-  "description": "Repo with tasks for JS",
-  "main": "index.js",
+  "description": "Archived JavaScript frontend course exercises.",
+  "private": true,
   "scripts": {
     "lint": "eslint \"./**/*.js\"",
     "lint:fix": "eslint --fix \"./**/*.js\"",
     "test": "cross-env NODE_ICU_DATA=node_modules/full-icu jest",
-    "test:specific": "cross-env NODE_ICU_DATA=node_modules/full-icu jest -t 'intro/sum'"
+    "test:all": "npm test",
+    "test:specific": "cross-env NODE_ICU_DATA=node_modules/full-icu jest --findRelatedTests"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/javascriptru/tasks-js-2.git"
+    "url": "git+https://github.com/itkrivoshei/javascript-frontend-course-exercises.git"
   },
-  "author": "Vladimir Shevchuk",
+  "author": "itkrivoshei",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/javascriptru/tasks-js-2/issues"
+    "url": "https://github.com/itkrivoshei/javascript-frontend-course-exercises/issues"
   },
-  "homepage": "https://github.com/javascriptru/tasks-js-2#readme",
+  "homepage": "https://github.com/itkrivoshei/javascript-frontend-course-exercises#readme",
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=6.0.0"
