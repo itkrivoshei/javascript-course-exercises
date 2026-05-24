@@ -29,7 +29,7 @@ export default class Page {
     this.url.searchParams.set('_sort', 'title');
     this.url.searchParams.set('_order', 'asc');
     this.url.searchParams.set('from', from.toISOString());
-    this.url.searchParams.set('from', to.toISOString());
+    this.url.searchParams.set('to', to.toISOString());
 
     return fetchJson(this.url);
   }
