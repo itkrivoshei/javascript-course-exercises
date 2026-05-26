@@ -1,111 +1,59 @@
-# JavaScript Frontend Course Exercises
+# JavaScript Frontend Components
 
-[![Verify](https://img.shields.io/github/actions/workflow/status/itkrivoshei/javascript-frontend-course-exercises/verify.yml?branch=master&style=flat-square&label=verify)](https://github.com/itkrivoshei/javascript-frontend-course-exercises/actions/workflows/verify.yml)
+[![Verify](https://img.shields.io/github/actions/workflow/status/itkrivoshei/javascript-frontend-course-exercises/verify.yml?branch=master&style=flat-square&label=verify&logo=githubactions&logoColor=white)](https://github.com/itkrivoshei/javascript-frontend-course-exercises/actions/workflows/verify.yml)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES%20Modules-f7df1e?style=flat-square&logo=javascript&logoColor=000)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Jest](https://img.shields.io/badge/Jest-25-c21325?style=flat-square&logo=jest&logoColor=white)](package.json)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg?style=flat-square)](LICENSE)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES%20Modules-f7df1e?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-Archived JavaScript frontend course exercises covering language fundamentals, DOM components, async data loading, browser routing, and Jest-based tests.
+Collection of vanilla JavaScript frontend modules: data utilities, DOM components, browser widgets, async API integrations, form controls, sortable lists, and a dashboard page.
 
-## Stack
+## Included Surface
 
-- JavaScript ES modules
-- HTML and CSS
-- DOM APIs
-- Fetch API
-- Jest
-- Babel
-- ESLint
-- GitHub Actions
+| Area | Examples |
+| --- | --- |
+| Data helpers | sort strings, pick/omit object keys, trim symbols, unique values |
+| DOM components | notifications, column charts, sortable tables, tooltips |
+| Events | double slider, drag sorting, document click handling |
+| Async UI | Fetch wrappers, paginated tables, dashboard metrics |
+| Forms | product forms, image list controls, date range picker |
+| Browser routing | dashboard page assembled from reusable components |
 
-## Scope
+The repository includes `21` Jest-covered modules and `13` standalone browser entry points.
 
-This repository contains completed exercises from an earlier JavaScript frontend course. It is kept as an archived learning repository, not as an actively maintained application.
-
-Covered areas include:
-
-- JavaScript fundamentals
-- objects and arrays
-- DOM manipulation
-- browser events
-- async code and Fetch API
-- form components
-- frontend component patterns
-- Jest tests
-- browser routing and History API
-
-## Project structure
-
-```txt
-.
-├── 01-intro/
-├── 02-javascript-data-types/
-├── 03-objects-arrays-intro-to-testing/
-├── 04-oop-basic-intro-to-dom/
-├── 05-dom-document-loading/
-├── 06-events-practice/
-├── 07-async-code-fetch-api-part-1/
-├── 08-forms-fetch-api-part-2/
-├── 09-tests-for-frontend-apps/
-├── 10-routes-browser-history-api/
-├── .github/workflows/
-├── package.json
-└── README.md
-```
-
-## Installation
+## Local Setup
 
 ```bash
-npm install
-```
-
-For CI-style installs, use:
-
-```bash
+git clone https://github.com/itkrivoshei/javascript-frontend-course-exercises.git
+cd javascript-frontend-course-exercises
 npm ci
 ```
 
-## Verification
+## Commands
 
-Run linting:
+| Command | Description |
+| --- | --- |
+| `npm run lint` | Run ESLint over JavaScript files |
+| `npm run lint:fix` | Apply ESLint fixes |
+| `npm test` | Run the Jest suite |
+| `npm run test:all` | Alias for all tests |
+| `npm run test:specific -- path/to/file.js` | Run tests related to a file |
 
-```bash
-npm run lint
-```
+## Browser Entries
 
-Run all tests:
-
-```bash
-npm test
-```
-
-Alias for all tests:
-
-```bash
-npm run test:all
-```
-
-Run tests related to a specific file:
-
-```bash
-npm run test:specific -- path/to/exercise/index.js
-```
-
-## Run
-
-Most exercises are standalone files or small browser examples. There is no single application entry point and no build step.
-
-For browser-based exercises, open the relevant exercise `index.html` file directly or serve the repository with a simple local static server.
-
-Example:
+There is no single bundled app. Open a local HTML file directly or serve the repository as static files:
 
 ```bash
 npx serve .
 ```
 
-## Notes
+Then open the relevant `index.html` under one of the component folders.
 
-Some base files, test files, and exercise structure come from the original course repository. This repository contains completed exercise implementations and small maintenance updates.
+## Tooling Notes
+
+- Jest runs through Babel for ES module syntax.
+- `full-icu` is used so locale-sensitive tests behave consistently.
+- GitHub Actions has a push verification workflow on `master` and a pull-request test workflow.
 
 ## License
 
-Licensed under the [ISC License](LICENSE).
+[ISC](LICENSE)
